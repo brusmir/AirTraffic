@@ -28,9 +28,9 @@ window.onload = function(){
           table += response.acList[i].Alt + "</a></td>";
           table += "<td><a href='detail.html?airmodel=" + response.acList[i].Mdl + "&from="+ response.acList[i].From + "&destination=" + response.acList[i].To + "&company=" + response.acList[i].Op +"'>" + response.acList[i].Call + "</a></td>";
           if(response.acList[i].Trak > 180){
-            table += "<td><img src='image/airred.jpg'></td></tr>";  
+            table += "<td><img src='image/airred.png'></td></tr>";  
           }else{
-            table += "<td><img src='image/airredreverse.jpg'></td></tr>";
+            table += "<td><img src='image/airredreverse.png'></td></tr>";
           }          
         }
         table += "</table>";
