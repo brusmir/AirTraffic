@@ -24,12 +24,10 @@ window.onload = function(){
         table += "<th>Flight code number</td>";
         table += "<th>Flight Direction</th></tr></thead>";
         for(let i = 0; i < response.acList.length; i++){
-          let lat = response.acList[i].Lat;
-          let long = response.acList[i].Long;
           table += "<tr><td><a href='detail.html?airmodel=" + response.acList[i].Mdl + "&from="+ response.acList[i].From + "&destination=" + response.acList[i].To + "&company=" + response.acList[i].Op +"'>"; 
           table += response.acList[i].Alt + "</a></td>";
           table += "<td><a href='detail.html?airmodel=" + response.acList[i].Mdl + "&from="+ response.acList[i].From + "&destination=" + response.acList[i].To + "&company=" + response.acList[i].Op +"'>" + response.acList[i].Call + "</a></td>";
-          if(lat > 0 && long < 0){
+          if(response.acList[i].Trak > 180){
             table += "<td><img src='image/airred.jpg'></td></tr>";  
           }else{
             table += "<td><img src='image/airredreverse.jpg'></td></tr>";
